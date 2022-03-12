@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+section {
+  padding: 6rem 0rem;
+}
+section .section-header {
+  position: relative;
+  text-align: center;
+}
+section .section-header h3 {
+  text-align: center;
+  overflow: hidden;
+  text-transform: uppercase;
+  color: #0E2C66;
+}
+section .section-header h3::before, section .section-header h3::after {
+  background-color: #0E2C66;
+  content: "";
+  display: inline-block;
+  height: 3px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+section .section-header h3:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+section .section-header h3:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+section .section-header #left-triangle {
+  position: absolute;
+  top: 18%;
+  left: 41%;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 14px solid #0E2C66;
+  border-bottom: 8px solid transparent;
+}
+section .section-header #right-triangle {
+  position: absolute;
+  top: 18%;
+  right: 41%;
+  z-index: 9999;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 14px solid #0E2C66;
+  border-bottom: 8px solid transparent;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
+
+header {
+  background-color: #0E2C66;
+  padding: 4rem 4rem 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+header .logo {
+  cursor: pointer;
+}
+header .hamburger {
+  display: none;
+  color: #fff;
+}
+header a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 0.7rem;
+  font-weight: 700;
+  transition: all 0.3s ease 0s;
+}
+header a:hover {
+  color: #ccc;
+}
+header .cta-btn {
+  background-color: #05DEEC;
+  margin-left: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+header .cta-btn:hover {
+  background-color: #fff;
+}
+header .navlinks {
+  list-style: none;
+}
+header .navlinks li {
+  display: inline-block;
+}
+
+.compliance-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: fit-content;
+  height: 530px;
+}
+
+.iot-icon {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  width: 29%;
+  height: 480px;
+}
+
+main {
+  position: relative;
+}
+main article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0E2C66;
+  color: #fff;
+  height: 80vh;
+}
+main article .hero {
+  width: 46%;
+  margin-top: -3%;
+}
+main article .hero .title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+main article .hero p {
+  margin: 2rem 5rem;
+}
+main article .hero .btn-group {
+  display: flex;
+  justify-content: space-evenly;
+}
+main article .hero .btn-group a {
+  border: 2px solid #05DEEC;
+  border-radius: 8px;
+  padding: 0.8rem 3rem;
+}
+main article .hero .btn-group a:first-of-type {
+  background-color: #05DEEC;
+}
+main .btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -5%;
+}
+main .btn-container .scroll-down-btn {
+  background-color: #05DEEC;
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+  border: 0;
+}
+main .btn-container .scroll-down-btn:hover {
+  background-color: #fff;
+  color: #ccc;
+}
+
+@media (max-width: 35em) {
+  header .logo {
+    width: 100px;
+  }
+  header .hamburger {
+    display: block;
+  }
+  header .navlinks {
+    display: none;
+  }
+  header .navlinks li {
+    display: block;
+    padding: 1rem;
+  }
+
+  .compliance-icon {
+    display: none;
+  }
+
+  .iot-icon {
+    display: none;
+  }
+
+  main article {
+    padding: 0 0.5rem;
+    height: 90vh;
+  }
+  main article .hero {
+    width: 100%;
+    margin-top: 0;
+  }
+  main article .hero .title {
+    font-size: 2rem;
+  }
+  main article .hero p {
+    margin: 2rem 1.5rem;
+  }
+  main article .hero .btn-group {
+    flex-direction: column;
+    text-align: center;
+  }
+  main article .hero .btn-group a:last-of-type {
+    margin-top: 1rem;
+  }
+  main .btn-container {
+    margin-top: -31%;
+    padding: 0.9rem 1.2rem;
+  }
+}

@@ -1,0 +1,208 @@
+@import 'base';
+
+header {
+  background-color: #0E2C66;
+  padding: 4rem 4rem 1rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+
+  .logo {
+    cursor: pointer;
+  }
+
+  .hamburger {
+    display: none;
+    color: #fff;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0.7rem;
+    font-weight: 700;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
+
+  .cta-btn {
+    background-color: #05DEEC;
+    margin-left: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+
+
+  .navlinks {
+    list-style: none;
+
+    li {
+      display: inline-block;
+    }
+
+  }
+
+
+}
+
+.compliance-icon {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: fit-content;
+  height: 530px;
+}
+
+.iot-icon {
+  position: absolute;
+  right: 0%;
+  bottom: 0%;
+  // overflow: hidden;
+  width: 29%;
+  height: 480px;
+}
+
+main {
+  position: relative;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $primary_color;
+    color: #fff;
+    height: 80vh;
+
+
+
+    .hero {
+      width: 46%;
+      margin-top: -3%;
+
+      .title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+
+      }
+
+      p {
+        margin: 2rem 5rem;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+          border: 2px solid $light-blue;
+          border-radius: 8px;
+          padding: 0.8rem 3rem;
+
+          &:first-of-type {
+            background-color: $light-blue;
+          }
+        }
+      }
+    }
+
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -5%;
+
+    .scroll-down-btn {
+      background-color: $light-blue;
+      color: #fff;
+      font-size: 2rem;
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      border: 0;
+
+      &:hover {
+        background-color: #fff;
+        color: #ccc;
+      }
+    }
+  }
+}
+
+.about-us {
+}
+
+
+@media (max-width: 35em) {
+  header {
+    .logo {
+      width: 100px;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .navlinks {
+      display: none;
+
+      li {
+        display: block;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .compliance-icon {
+    display: none;
+  }
+
+  .iot-icon {
+    display: none
+  }
+
+  main {
+    article {
+      padding: 0 0.5rem;
+      height: 90vh;
+
+      .hero {
+        width: 100%;
+        margin-top: 0;
+
+        .title {
+          font-size: 2rem;
+        }
+
+        p {
+          margin: 2rem 1.5rem;
+        }
+
+        .btn-group {
+          flex-direction: column;
+          text-align: center;
+
+          a:last-of-type {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      margin-top: -31%;
+      padding: 0.9rem 1.2rem;
+    }
+  }
+
+}

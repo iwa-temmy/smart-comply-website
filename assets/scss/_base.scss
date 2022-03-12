@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$primary_color: #0E2C66;
+$light-blue: #05DEEC;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+}
+
+section {
+  padding: 6rem 0rem;
+
+  .section-header {
+    position: relative;
+    text-align: center;
+
+    h3 {
+      text-align: center;
+      overflow: hidden;
+      text-transform: uppercase;
+      color: $primary_color;
+
+      &::before,
+      &::after {
+        background-color: $primary_color;
+        content: "";
+        display: inline-block;
+        height: 3px;
+        position: relative;
+        vertical-align: middle;
+        width: 50%;
+      }
+
+      &:before {
+        right: 0.5em;
+        margin-left: -50%;
+      }
+
+      &:after {
+        left: 0.5em;
+        margin-right: -50%;
+      }
+    }
+
+    #left-triangle {
+      position: absolute;
+      top: 18%;
+      left: 41%;
+      z-index: 9999;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-right: 14px solid $primary_color;
+      border-bottom: 8px solid transparent;
+    }
+
+    #right-triangle {
+      position: absolute;
+      top: 18%;
+      right: 41%;
+      z-index: 9999;
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-left: 14px solid $primary_color;
+      border-bottom: 8px solid transparent;
+    }
+  }
+}
+
+.grid-container{
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+}
