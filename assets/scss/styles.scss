@@ -1,7 +1,7 @@
-@import 'base';
+@import "base";
 
 header {
-  background-color: #0E2C66;
+  background-color: #0e2c66;
   padding: 4rem 4rem 1rem 4rem;
   display: flex;
   align-items: center;
@@ -31,7 +31,7 @@ header {
   }
 
   .cta-btn {
-    background-color: #05DEEC;
+    background-color: #05deec;
     margin-left: 1rem;
     padding: 1rem 2rem;
     border-radius: 8px;
@@ -41,34 +41,36 @@ header {
     }
   }
 
-
   .navlinks {
     list-style: none;
 
     li {
       display: inline-block;
     }
-
   }
-
-
 }
 
 .compliance-icon {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -11px;
   width: fit-content;
-  height: 530px;
+  height: 80%;
+  svg {
+    width: 100%;
+    height: fit-content;
+    max-height: 100%;
+  }
 }
 
 .iot-icon {
   position: absolute;
-  right: 0%;
-  bottom: 0%;
-  // overflow: hidden;
-  width: 29%;
-  height: 480px;
+  right: 0;
+  bottom: -11px;
+  width: fit-content;
+  height: 70%;
+  // height: fit-content;
+  max-height: 100%;
 }
 
 main {
@@ -79,11 +81,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $primary_color;
+    background: url(../images/LHS.svg) left bottom no-repeat,
+      url(../images/RHS.svg) right bottom no-repeat,
+      $primary_color left top repeat;
     color: #fff;
     height: 80vh;
-
-
 
     .hero {
       width: 46%;
@@ -93,7 +95,6 @@ main {
         text-align: center;
         font-size: 3rem;
         font-weight: 700;
-
       }
 
       p {
@@ -115,7 +116,6 @@ main {
         }
       }
     }
-
   }
 
   .btn-container {
@@ -127,7 +127,7 @@ main {
       background-color: $light-blue;
       color: #fff;
       font-size: 2rem;
-      padding: 1rem 1.2rem;
+      padding: 0.7rem 0.9rem;
       border-radius: 50%;
       border: 0;
 
@@ -140,8 +140,16 @@ main {
 }
 
 .about-us {
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    img {
+      width: 70%;
+    }
+  }
 }
-
 
 @media (max-width: 35em) {
   header {
@@ -168,7 +176,7 @@ main {
   }
 
   .iot-icon {
-    display: none
+    display: none;
   }
 
   main {
@@ -204,5 +212,4 @@ main {
       padding: 0.9rem 1.2rem;
     }
   }
-
 }

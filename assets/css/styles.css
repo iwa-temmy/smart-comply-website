@@ -72,7 +72,7 @@ section .section-header #right-triangle {
 }
 
 header {
-  background-color: #0E2C66;
+  background-color: #0e2c66;
   padding: 4rem 4rem 1rem 4rem;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@ header a:hover {
   color: #ccc;
 }
 header .cta-btn {
-  background-color: #05DEEC;
+  background-color: #05deec;
   margin-left: 1rem;
   padding: 1rem 2rem;
   border-radius: 8px;
@@ -116,17 +116,23 @@ header .navlinks li {
 .compliance-icon {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -11px;
   width: fit-content;
-  height: 530px;
+  height: 80%;
+}
+.compliance-icon svg {
+  width: 100%;
+  height: fit-content;
+  max-height: 100%;
 }
 
 .iot-icon {
   position: absolute;
-  right: 0%;
-  bottom: 0%;
-  width: 29%;
-  height: 480px;
+  right: 0;
+  bottom: -11px;
+  width: fit-content;
+  height: 70%;
+  max-height: 100%;
 }
 
 main {
@@ -137,7 +143,7 @@ main article {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #0E2C66;
+  background: url(../images/LHS.svg) left bottom no-repeat, url(../images/RHS.svg) right bottom no-repeat, #0E2C66 left top repeat;
   color: #fff;
   height: 80vh;
 }
@@ -174,13 +180,23 @@ main .btn-container .scroll-down-btn {
   background-color: #05DEEC;
   color: #fff;
   font-size: 2rem;
-  padding: 1rem 1.2rem;
+  padding: 0.7rem 0.9rem;
   border-radius: 50%;
   border: 0;
 }
 main .btn-container .scroll-down-btn:hover {
   background-color: #fff;
   color: #ccc;
+}
+
+.about-us .about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+}
+.about-us .about-image img {
+  width: 70%;
 }
 
 @media (max-width: 35em) {
