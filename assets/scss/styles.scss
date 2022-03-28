@@ -299,6 +299,64 @@ main {
     }
   }
 }
+.supported-infrastructures {
+  position: relative;
+  z-index: 1;
+  .light-blue-bg {
+    background-color: $light-blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 110%;
+    width: 75%;
+    border-radius: 0px 100px 100px 0px;
+  }
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 4rem;
+    line-height: 1.3;
+    p {
+      font-size: 26px;
+      width: 40%;
+      padding: 3rem 0 2rem 0;
+      font-weight: 700;
+    }
+    .applications {
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      width: 100%;
+      padding: 2rem;
+      .application {
+        background: #fff;
+        box-shadow: 10px -1px 242px 0px rgba(204, 204, 204, 0.75);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 150px;
+        padding: 1rem;
+        border-radius: 20px;
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .light-blue-bg {
+      height: 100%;
+      width: 95%;
+    }
+    .content {
+      flex-direction: column;
+      padding: 0 2rem;
+      p {
+        font-size: 24px;
+        width: 100%;
+      }
+    }
+  }
+}
 //Process
 .standards {
   background-color: $primary_color;
