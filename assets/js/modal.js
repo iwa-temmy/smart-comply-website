@@ -2,7 +2,6 @@ const demoBtns = document.querySelectorAll(".demo-btn");
 const modal = document.getElementById("modal");
 const backdrop = document.getElementById("modal-backdrop");
 
-console.log(demoBtns);
 const handleModalOpen = () => {
   modal.classList.add("open");
   modal.classList.remove("close");

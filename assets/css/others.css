@@ -4,7 +4,8 @@
 *::before {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -20,16 +21,22 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 section .section-header {
   position: relative;
   text-align: center;
 }
+
 section .section-header h3 {
   text-align: center;
   overflow: hidden;
   text-transform: uppercase;
   color: #0e2c66;
 }
+
 section .section-header h3::before, section .section-header h3::after {
   background-color: #0e2c66;
   content: "";
@@ -39,20 +46,26 @@ section .section-header h3::before, section .section-header h3::after {
   vertical-align: middle;
   width: 50%;
 }
+
 section .section-header h3:before {
   right: 0.5em;
   margin-left: -50%;
 }
+
 section .section-header h3:after {
   left: 0.5em;
   margin-right: -50%;
 }
 
 .grid-container {
+  display: -ms-grid;
   display: grid;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
 }
 
@@ -62,10 +75,12 @@ section .section-header h3:after {
   border-radius: 8px;
   text-decoration: none;
   color: #fff;
+  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   border: none;
   outline: none;
 }
+
 .primary-btn:hover {
   background-color: #04afba;
 }
@@ -73,10 +88,12 @@ section .section-header h3:after {
 .find-out {
   background-color: #f0f0f0;
 }
+
 .find-out .headline {
   text-align: center;
   color: #0e2c66;
 }
+
 .find-out .preamble {
   font-weight: 500;
   font-size: 22px;
@@ -84,12 +101,14 @@ section .section-header h3:after {
   line-height: 1.4;
   margin: 0 auto;
 }
+
 .find-out .find-out-why {
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
   margin: 1rem 0;
 }
+
 .find-out .request-demo-btn {
   background-color: #0e2c66;
   color: #fff;
@@ -99,11 +118,15 @@ section .section-header h3:after {
   border: 0px;
   border-radius: 8px;
 }
+
 .find-out .grid-container {
+  display: -ms-grid;
   display: grid;
   grid-gap: 40px;
-  grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
+
 .find-out .grid-container #security-bros {
   max-height: 300px;
 }
@@ -112,45 +135,65 @@ section .section-header h3:after {
   margin: 1rem 0;
   background: linear-gradient(89.75deg, rgba(5, 222, 236, 0.1) 8.89%, rgba(14, 44, 102, 0.1) 89.54%);
 }
+
 .how-it-works .content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 40px 0;
   padding: 0 8%;
   width: 100%;
   overflow-x: hidden;
 }
+
 .how-it-works .content-container .img-container {
   margin: 0 2rem;
 }
+
 .how-it-works .content-container .img-container img {
   width: 25vw;
 }
+
 .how-it-works .content-container .img-container img svg {
   width: 300px;
 }
+
 .how-it-works .content-container .content {
   width: 55%;
 }
+
 .how-it-works .content-container .content .content-header {
   color: #0e2c66;
   font-weight: 700;
   font-size: 24px;
   margin: 0.5rem 0;
 }
+
 .how-it-works .content-container .content p {
   color: #0e2c66;
   font-weight: 700;
   font-size: 1.1rem;
   width: 95%;
 }
+
 @media only screen and (max-width: 768px) {
   .how-it-works .content-container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .how-it-works .content-container:nth-of-type(even) {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .how-it-works .content-container .img-container {
     margin: 1rem 0;
@@ -170,11 +213,13 @@ section .section-header h3:after {
   color: #fff;
   border-radius: 12px;
 }
+
 .get-started p {
   margin: 0 auto;
   font-size: 30px;
   font-weight: 700;
 }
+
 .get-started button {
   background-color: #0e2c66;
   color: #fff;
@@ -187,38 +232,57 @@ section .section-header h3:after {
 footer {
   padding: 1rem 3rem;
 }
+
 footer ul {
   list-style: none;
 }
+
 footer ul li:first-of-type {
   font-weight: 700;
 }
+
 footer ul li {
   padding: 0.5rem 1rem;
 }
+
 footer .footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 50%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 1rem 0;
 }
+
 footer .footer-logo img {
   width: 80%;
 }
+
 footer .request-btn {
   color: #0e2c66;
   padding: 0.8rem 2rem;
   border: 2px solid #0e2c66;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(14, 44, 102, 0.28)), to(rgba(5, 222, 236, 0.28)));
   background: linear-gradient(90deg, rgba(14, 44, 102, 0.28) 0%, rgba(5, 222, 236, 0.28) 100%);
   border-radius: 8px;
   margin-top: 2rem;
 }
+
 footer .mother-company {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 1.5rem;
 }
+
 footer .mother-company img {
   width: 15%;
 }
@@ -227,13 +291,15 @@ footer .mother-company img {
   .find-out .preamble {
     width: 100%;
   }
-
   footer {
     padding: 1rem;
   }
   footer .footer-container {
     width: 100%;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   footer .mother-company img {
     width: 70%;
