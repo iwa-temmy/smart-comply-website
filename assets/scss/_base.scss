@@ -1,22 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-$primary_color: #0E2C66;
-$light-blue: #05DEEC;
+$primary_color: #0e2c66;
+$light-blue: #05deec;
 
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-family: "Archivo", sans-serif;
+  font-size: 16px;
 }
-
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
 section {
-  padding: 6rem 0rem;
-
   .section-header {
     position: relative;
     text-align: center;
@@ -48,37 +53,30 @@ section {
         margin-right: -50%;
       }
     }
-
-    #left-triangle {
-      position: absolute;
-      top: 18%;
-      left: 41%;
-      z-index: 9999;
-      width: 0;
-      height: 0;
-      border-top: 8px solid transparent;
-      border-right: 14px solid $primary_color;
-      border-bottom: 8px solid transparent;
-    }
-
-    #right-triangle {
-      position: absolute;
-      top: 18%;
-      right: 41%;
-      z-index: 9999;
-      width: 0;
-      height: 0;
-      border-top: 8px solid transparent;
-      border-left: 14px solid $primary_color;
-      border-bottom: 8px solid transparent;
-    }
   }
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 40px;
+}
+%primary-btn {
+  background-color: $light-blue;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+  border: none;
+  outline: none;
+  &:hover {
+    background-color: darken($light-blue, 10%);
+  }
+}
+
+.primary-btn {
+  @extend %primary-btn;
 }
