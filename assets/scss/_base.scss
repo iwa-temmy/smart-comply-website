@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;500&display=swap");
 
-$primary_color: #0E2C66;
-$light-blue: #05DEEC;
+$primary_color: #0e2c66;
+$light-blue: #05deec;
 
 * {
   padding: 0;
@@ -10,7 +10,7 @@ $light-blue: #05DEEC;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
 }
 
@@ -75,7 +75,7 @@ section {
   }
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   justify-content: center;
   justify-items: center;

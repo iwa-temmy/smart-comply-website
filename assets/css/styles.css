@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -21,10 +21,10 @@ section .section-header h3 {
   text-align: center;
   overflow: hidden;
   text-transform: uppercase;
-  color: #0E2C66;
+  color: #0e2c66;
 }
 section .section-header h3::before, section .section-header h3::after {
-  background-color: #0E2C66;
+  background-color: #0e2c66;
   content: "";
   display: inline-block;
   height: 3px;
@@ -48,7 +48,7 @@ section .section-header #left-triangle {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-right: 14px solid #0E2C66;
+  border-right: 14px solid #0e2c66;
   border-bottom: 8px solid transparent;
 }
 section .section-header #right-triangle {
@@ -59,7 +59,7 @@ section .section-header #right-triangle {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
-  border-left: 14px solid #0E2C66;
+  border-left: 14px solid #0e2c66;
   border-bottom: 8px solid transparent;
 }
 
@@ -143,7 +143,7 @@ main article {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url(../images/LHS.svg) left bottom no-repeat, url(../images/RHS.svg) right bottom no-repeat, #0E2C66 left top repeat;
+  background: url(../images/LHS.svg) left bottom no-repeat, url(../images/RHS.svg) right bottom no-repeat, #0e2c66 left top repeat;
   color: #fff;
   height: 80vh;
 }
@@ -164,12 +164,12 @@ main article .hero .btn-group {
   justify-content: space-evenly;
 }
 main article .hero .btn-group a {
-  border: 2px solid #05DEEC;
+  border: 2px solid #05deec;
   border-radius: 8px;
   padding: 0.8rem 3rem;
 }
 main article .hero .btn-group a:first-of-type {
-  background-color: #05DEEC;
+  background-color: #05deec;
 }
 main .btn-container {
   display: flex;
@@ -177,7 +177,7 @@ main .btn-container {
   margin-top: -5%;
 }
 main .btn-container .scroll-down-btn {
-  background-color: #05DEEC;
+  background-color: #05deec;
   color: #fff;
   font-size: 2rem;
   padding: 0.7rem 0.9rem;
