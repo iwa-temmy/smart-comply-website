@@ -155,6 +155,7 @@ header nav .navlinks.main-navlinks {
   header nav .navlinks {
     display: block;
     padding-bottom: 4rem;
+    text-align: center;
   }
   header nav .navlinks a {
     display: block;

@@ -145,6 +145,23 @@ section .section-header h3:after {
   font-size: 1.1rem;
   width: 95%;
 }
+@media only screen and (max-width: 768px) {
+  .how-it-works .content-container {
+    flex-direction: column;
+  }
+  .how-it-works .content-container:nth-of-type(even) {
+    flex-direction: column-reverse;
+  }
+  .how-it-works .content-container .img-container {
+    margin: 1rem 0;
+  }
+  .how-it-works .content-container .img-container img {
+    width: 50vw;
+  }
+  .how-it-works .content-container .content {
+    width: 100%;
+  }
+}
 
 .get-started {
   background: url(../images/get-started-bg.svg) no-repeat;
@@ -208,22 +225,6 @@ footer .mother-company img {
 
 @media only screen and (max-width: 768px) {
   .find-out .preamble {
-    width: 100%;
-  }
-
-  .how-it-works .content-container {
-    flex-direction: column;
-  }
-  .how-it-works .content-container:nth-of-type(even) {
-    flex-direction: column-reverse;
-  }
-  .how-it-works .content-container .img-container {
-    margin: 1rem 0;
-  }
-  .how-it-works .content-container .img-container img {
-    width: 50vw;
-  }
-  .how-it-works .content-container .content {
     width: 100%;
   }
 

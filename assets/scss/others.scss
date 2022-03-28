@@ -80,6 +80,23 @@
       }
     }
   }
+  @media only screen and (max-width: 768px) {
+    .content-container {
+      flex-direction: column;
+      &:nth-of-type(even) {
+        flex-direction: column-reverse;
+      }
+      .img-container {
+        margin: 1rem 0;
+        img {
+          width: 50vw;
+        }
+      }
+      .content {
+        width: 100%;
+      }
+    }
+  }
 }
 
 //Get Started
@@ -154,25 +171,6 @@ footer {
   .find-out {
     .preamble {
       width: 100%;
-    }
-  }
-
-  //how It works
-  .how-it-works {
-    .content-container {
-      flex-direction: column;
-      &:nth-of-type(even) {
-        flex-direction: column-reverse;
-      }
-      .img-container {
-        margin: 1rem 0;
-        img {
-          width: 50vw;
-        }
-      }
-      .content {
-        width: 100%;
-      }
     }
   }
 
